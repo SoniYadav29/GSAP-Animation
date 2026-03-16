@@ -1,0 +1,171 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* Hero Section */
+#main {
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  background-color: #112255;
+  color: white;
+  padding: 5px;
+}
+
+h1 {
+  color: white;
+}
+
+/* Hero Section Layout */
+.container-fluid {
+  margin-top: 5rem;
+}
+
+.tag-box {
+  padding: 5rem 5rem;
+}
+
+.tag {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.para {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.buttons a {
+  margin-right: 1rem;
+}
+
+.btn-get-started,
+.btn-signIn-main {
+  background-color: #112255;
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-get-started:hover,
+.btn-signIn-main:hover {
+  background-color: #0f1a2f;
+}
+
+/* Image Section */
+.image img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Animation Section */
+.animationBox {
+  width: 100%;
+  height: 200vh;
+  background-color: beige;
+  position: relative;
+}
+
+/* Hide the animation boxes by default */
+#box1,
+#box2 {
+  visibility: hidden; /* Initially hidden */
+  opacity: 0; /* Fully transparent */
+  transition: visibility 0s, opacity 0.3s ease-out;
+}
+
+/* Box Styling */
+#box1,
+#box2 {
+  width: 200px;
+  height: 200px;
+  background-color: #112255;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  display: block;
+}
+#box1,
+#box2 {
+  width: 200px;
+  height: 200px;
+  background-color: #112255;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  opacity: 0; /* hidden initially */
+  pointer-events: none;
+}
+
+/* Box 1 Initial Position */
+#box1 {
+  left: 50%;
+  transform: translate(-100%, -50%);
+}
+
+/* Box 2 Initial Position */
+#box2 {
+  left: 50%;
+  transform: translate(100%, -50%);
+}
+
+/* Extra Section */
+.extra {
+  width: 100%;
+  height: 100vh;
+  background-color: lightgrey; /* Placeholder for the extra section */
+}
+
+.products {
+  z-index: 3;
+}
+
+.gryfas {
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gryfas .left {
+  flex: 1;
+}
+
+.gryfas .right {
+  flex: 1;
+  padding: 0 2rem;
+}
+
+.gryfas .right .image img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+/* For larger screens */
+@media (max-width: 992px) {
+  .gryfas {
+    flex-direction: column;
+  }
+}

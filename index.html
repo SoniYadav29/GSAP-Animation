@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prisma</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Add custom styles to hide boxes in hero section and show them only in animation section */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+
+      .products {
+        z-index: 3;
+      }
+
+      .animation {
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        overflow: hidden;
+      }
+
+      /* Initially hide the animation boxes in the hero section */
+      #box1,
+      #box2 {
+        visibility: hidden; /* Initially hide the boxes */
+        opacity: 0; /* Make them fully transparent */
+      }
+
+      /* Show the animation boxes when they enter the animationBox section */
+      .animationBox .animation #box1,
+      .animationBox .animation #box2 {
+        visibility: visible; /* Make them visible */
+        opacity: 1; /* Make them opaque */
+      }
+
+      #box1,
+      #box2 {
+        width: 200px;
+        height: 200px;
+        background-color: #112255;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        display: block; /* Ensure they are displayed */
+      }
+
+      .animation {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      #box1 {
+        left: 50%;
+        transform: translate(-100%, -50%);
+      }
+
+      #box2 {
+        left: 50%;
+        transform: translate(100%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <section id="main">
+      <nav style="background-color: #112255; color: white; padding: 5px">
+        <div class="container">
+          <a href="#" style="color: white; text-decoration: none">
+            <h1>Logo</h1>
+          </a>
+        </div>
+      </nav>
+      <!-- hero section start -->
+      <main>
+        <div class="container-fluid row my-5 g-0">
+          <div class="col-6 d-flex justify-content-center align-items-center">
+            <div class="tag-box ms-5 ps-5 py-5">
+              <div class="tag pt-5" style="font-weight: bold; font-size: large">
+                INTRUCING
+              </div>
+              <h1 class="heading">I am John Doe, Photographer based in USA.</h1>
+              <p class="para">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque
+                hic accusantium debitis dolorum at tempore vitae perferendis.
+                Quasi iure doloribus ad maxime, laudantium officia commodi earum
+                inventore
+              </p>
+              <div class="buttons">
+                <a href="#" class="btn-get-started">Documentation</a>
+                <a href="#" class="btn-signIn-main">Get started</a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-6 d-flex justify-content-center align-items-center"
+            style="overflow: hidden"
+          >
+            <div class="image">
+              <img
+                src="/Images/face-recog.png"
+                style="width: 400px; height: 400px"
+              />
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+    <section class="w-100 h-100">
+      <div
+        class="animationBox"
+        style="width: 100%; height: 200vh; background-color: beige"
+      >
+        <div class="row g-0">
+          <div
+            class="animation justify-content-center align-items-center d-flex"
+          >
+            <div id="box1"></div>
+            <div id="box2"></div>
+          </div>
+          <div class="row g-0" style="background-color: rgb(223, 223, 189)">
+            <div class="col-3"></div>
+            <div class="col-6">
+              <!-- products -->
+              <div class="products">
+                <!-- GryFAS -->
+                <div
+                  class="gryfas shadow align-items-center justify-content-center d-flex p-5 my-5"
+                  style="background-color: white; border-color: 2px #112255"
+                >
+                  <div class="left p-3">
+                    <h1 style="font-size: 2.5rem; color: #112255">GryFAS</h1>
+                    <p>
+                      GryFAS revolutionizes financial authentication by
+                      providing unparalleled level of security through facial
+                      authentication for every transaction. It surpasses
+                      traditional method like PIN, OTP, offering an extra layer
+                      of protection against unauthorized access and fraud.
+                    </p>
+                  </div>
+                  <div class="right">
+                    <div class="image" style="width: 300px; height: auto">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoggiqK8UpVKsuwIQp--FndDmEbWgUvSnviQ&s"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- GrySEC -->
+                <div
+                  class="gryfas shadow align-items-center justify-content-center d-flex p-5 my-5"
+                  style="background-color: white; border-color: 2px #112255"
+                >
+                  <div class="left p-3">
+                    <h1 style="font-size: 2.5rem; color: #112255">GrySEC</h1>
+                    <p>
+                      GryFAS revolutionizes financial authentication by
+                      providing unparalleled level of security through facial
+                      authentication for every transaction. It surpasses
+                      traditional method like PIN, OTP, offering an extra layer
+                      of protection against unauthorized access and fraud.
+                    </p>
+                  </div>
+                  <div class="right">
+                    <div class="image" style="width: 300px; height: auto">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoggiqK8UpVKsuwIQp--FndDmEbWgUvSnviQ&s"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- GrySCAN -->
+                <div
+                  class="gryfas shadow align-items-center justify-content-center d-flex p-5 my-5"
+                  style="background-color: white; border-color: 2px #112255"
+                >
+                  <div class="left p-3">
+                    <h1 style="font-size: 2.5rem; color: #112255">GrySCAN</h1>
+                    <p>
+                      GryFAS revolutionizes financial authentication by
+                      providing unparalleled level of security through facial
+                      authentication for every transaction. It surpasses
+                      traditional method like PIN, OTP, offering an extra layer
+                      of protection against unauthorized access and fraud.
+                    </p>
+                  </div>
+                  <div class="right">
+                    <div class="image" style="width: 300px; height: auto">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoggiqK8UpVKsuwIQp--FndDmEbWgUvSnviQ&s"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- Veri5 -->
+                <div
+                  class="gryfas shadow align-items-center justify-content-center d-flex p-5 my-5"
+                  style="background-color: white; border-color: 2px #112255"
+                >
+                  <div class="left p-3">
+                    <h1 style="font-size: 2.5rem; color: #112255">Veri5</h1>
+                    <p>
+                      GryFAS revolutionizes financial authentication by
+                      providing unparalleled level of security through facial
+                      authentication for every transaction. It surpasses
+                      traditional method like PIN, OTP, offering an extra layer
+                      of protection against unauthorized access and fraud.
+                    </p>
+                  </div>
+                  <div class="right">
+                    <div class="image" style="width: 300px; height: auto">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoggiqK8UpVKsuwIQp--FndDmEbWgUvSnviQ&s"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- GryVIDS -->
+                <div
+                  class="gryfas shadow align-items-center justify-content-center d-flex p-5 my-5"
+                  style="background-color: white; border-color: 2px #112255"
+                >
+                  <div class="left p-3">
+                    <h1 style="font-size: 2.5rem; color: #112255">GryV</h1>
+                    <p>
+                      GryFAS revolutionizes financial authentication by
+                      providing unparalleled level of security through facial
+                      authentication for every transaction. It surpasses
+                      traditional method like PIN, OTP, offering an extra layer
+                      of protection against unauthorized access and fraud.
+                    </p>
+                  </div>
+                  <div class="right">
+                    <div class="image" style="width: 300px; height: auto">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoggiqK8UpVKsuwIQp--FndDmEbWgUvSnviQ&s"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3"></div>
+          </div>
+          <div class="extra" style="width: 100%; height: 100vh"></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="contact"></div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
